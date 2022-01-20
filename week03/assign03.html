@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title style="font-family: Arial, Helvetica, sans-serif;">Alex Berryhill's Home Page</title>
+    <title style="font-family: Arial, Helvetica, sans-serif;">Alex Berryhill's Enhanced Home Page</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <header>
-        <a href="../index.html"><b><i>CS 213 Assignments</i></b></a>
+    <header>   
+        <button class="button" onclick="w3_open()">☰</button>
+        <h1>Welcome to Alex Berryhill's Enhanced Home Page</h1>
     </header>
-    <h1>Welcome to Alex Berryhill's Home Page</h1>
     <hr>
-    <img src="me.jpeg" alt="A picture of me" style="height:256px;float: right;">
+    <img src="me.jpeg" alt="A picture of me">
     <p style = "color: blue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
         Hello my Name is Alex Berryhill,<br>
-        My major is Computer Science and I am from South Ogden Utah.
+        My major is Computer Science and I am from South Ogden Utah. I want to eventually go into Robotics 
+        Engineering which is the <b>BEST</b>. I love how I can see it running, kinda like a kinesthetic 
+        programming language. Web design is pretty cool too, I've tried it before and was able to make 
+        a working site, not the prettiest as you could probably tell.
     </p>
-    <figure>
-        <blockquote cite= "https://www.brainyquote.com/quotes/steven_wright_104816" style="font-family: 'Courier New', Courier, monospace;"> 
-            <p>I intend to live forever. So far, so good.</p>
-        </blockquote>
-        <figcaption>—Steven Wright</figcaption>
-    </figure>
-    <table>
+    
+    <table id="courses">
         <tr>
             <th>Course #</th>
             <th>Course Description</th>
@@ -67,9 +65,21 @@
             <td>WEB</td>
         </tr>
     </table>
+    <hr>
     <footer>
-        Contact Me
-        <a href="https://byui.instructure.com/courses/175362/assignments/7947417?module_item_id=22214712">Week 3 Assignment</a>
-        <a href="https://byui.instructure.com/">Canvas</a>
+        <p class="bar-item">Contact Me</p>
+        <a href="https://byui.instructure.com/courses/175362/assignments/7947417?module_item_id=22214712" class="bar-item">Week 3 Assignment</a>
+        <a href="https://byui.instructure.com/" class="bar-item">Canvas</a>
     </footer>
+    <script src="button.js"></script>
+        <div class="sidebar" style="display:none" id="mySidebar">
+            <button onclick="w3_close()" class="bar-item">Close &times;</button>
+            <a href="../index.html" class="bar-item"><b><i>CS 213 Assignments</i></b></a>
+            <figure class="bar-item">
+                <blockquote cite= "https://www.brainyquote.com/quotes/steven_wright_104816" style="font-family: 'Courier New', Courier, monospace;"> 
+                    <p>I intend to live forever. So far, so good.</p>
+                </blockquote>
+                <figcaption>—Steven Wright</figcaption>
+            </figure>
+        </div><!--sidebar-->
 </body>
