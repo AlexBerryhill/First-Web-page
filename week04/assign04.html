@@ -7,20 +7,84 @@
     <link rel="stylesheet" href="stylesheet.css">
     <script src="js/home.js"></script>
     <style>
+        .product-container{
+            padding: 0 10vw;
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
 
+        .product-container::-webkit-scrollbar{
+            display: none;
+        }
+
+        .product-card{
+            flex: 0 0 auto;
+            width: 250px;
+            height: 450px;
+            margin-right: 40px;
+        }
+
+        .product-image{
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .product-thumb{
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .discount-tag{
+            position: absolute;
+            background: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            color: #ff7d7d;
+            right: 10px;
+            top: 10px;
+            text-transform: capitalize;
+        }
+
+        .card-btn{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            width: 90%;
+            text-transform: capitalize;
+            border: none;
+            outline: none;
+            background: #fff;
+            border-radius: 5px;
+            transition: 0.5s;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        .product-card:hover .card-btn{
+            opacity: 1;
+        }
+
+        .card-btn:hover{
+            background: #efefef;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar">
+    <nav id="navbar">
         <div class="nav">
-            <img src="img/dark-logo.png" class="brand-logo" alt="">
-            <div class="nav-items">
+            <a href="./assign04.html"><img src="img/dark-logo.png" class="brand-logo" alt=""></a>            <div class="nav-items">
                 <div class="search">
                     <input type="text" class="search-box" placeholder="search brand, product">
                     <button class="search-btn">search</button>
                 </div>
-                <a href="#"><img src="img/user.png" alt=""></a>
-                <a href="#"><img src="img/cart.png" alt=""></a>
+                <a href="#"><img src="img/user.png" alt="user"></a>
+                <a href="#"><img src="img/cart.png" alt="cart"></a>
             </div><!--nav-items-->
         </div><!--nav-->
     </nav><!--navbar-->
@@ -33,28 +97,30 @@
     </ul>
     <header class="hero-section">
         <div class="content">
-            <img src="img/light-logo.png" class="logo" alt="">
-            <p class="sub-heading">only the best electric skateboards</p>
+            <img src="img/light-logo.png" class="logo" alt="logo">
+            <p class="sub-heading">e-commerce sites are my specialty</p>
         </div>
     </header>
     <section class="product">
         <h2 class="product-category">best selling</h2>
-        <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
-        <button class="nxt-btn"><img src="img/arrow.png" alt=""></button>
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/card01.png" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div><!--product-image-->
-                <div class="product-info">
-                    <h2 class="product-brand">Backfire</h2>
-                    <p class="product-short-des">A cool board</p>
-                    <span class="price">$200</span><span class="actual-price">$400</span>
-                </div><!--product-info-->
-            </div><!--product-card-->
-        </div><!--product-container-->
+        <button class="pre-btn"><img src="img/arrow.png" alt="arrow"></button>
+        <button class="nxt-btn"><img src="img/arrow.png" alt="arrow"></button>
+        <a href="./assign04_2.html">
+            <div class="product-container">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">50% off</span>
+                        <img src="img/card01.png" class="product-thumb" alt="product card">
+                        <button class="card-btn">add to whislist</button>
+                    </div><!--product-image-->
+                    <div class="product-info">
+                        <h2 class="product-brand">Assign04_2.html</h2>
+                        <p class="product-short-des">The home button gets you back</p>
+                        <span class="price">$200</span><span class="actual-price">$400</span>
+                    </div><!--product-info-->
+                </div><!--product-card-->
+            </div><!--product-container-->
+        </a>
     </section><!--product-->
     <section class="collection-container">
         <a href="#" class="collection">
@@ -120,6 +186,6 @@
                 <a href="#" class="social-link">twitter</a>
             </div>
         </div>
-        <p class="footer-credit">Clothing, Best apparels online store</p>
+        <p class="footer-credit">Alex Berryhill's Skateboard shop</p>
     </footer>
 </body>
