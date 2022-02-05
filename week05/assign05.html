@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font-family: Arial, Helvetica, sans-serif;">Flex Site</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="sidebar.js"></script>
+</head>
+<body>
+    <header>
+        <button class="menu" onclick="openSidebar()">☰</button>
+        <img src="./img/logo.png" alt="logo" class="logo">
+        <h1>Alex's Computers</h1>
+    </header>
+    <ul class="links-container">
+        <li class="link-item"><a href="#" class="link">home</a></li>
+        <li class="link-item"><a href="#" class="link">hp</a></li>
+        <li class="link-item"><a href="#" class="link">apple</a></li>
+        <li class="link-item"><a href="#" class="link">accessories</a></li>
+    </ul>
+    <section class="product">
+        <h2 class="product-category">HP</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/card01.png" class="product-thumb" alt="product card">
+                    <p class="card-btn">add to whislist</p>
+                </div><!--product-image-->
+                <div class="product-info">
+                    <h2 class="product-brand">Pavillion</h2>
+                    <p class="product-short-des">Pretty good I guess</p>
+                    <span class="price">$200</span>
+                </div><!--product-info-->
+            </div><!--product-card-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/card02.png" class="product-thumb" alt="product card">
+                    <p class="card-btn">add to whislist</p>
+                </div><!--product-image-->
+                <div class="product-info">
+                    <h2 class="product-brand">Pro-One</h2>
+                    <p class="product-short-des">All-in-One</p>
+                    <span class="price">$1,179</span>
+                </div><!--product-info-->
+            </div><!--product-card-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/card03.png" class="product-thumb" alt="product card">
+                    <p class="card-btn">add to whislist</p>
+                </div><!--product-image-->
+                <div class="product-info">
+                    <h2 class="product-brand">Spectre</h2>
+                    <p class="product-short-des">2-in-1 Laptop</p>
+                    <span class="price">$1,429.99</span>
+                </div><!--product-info-->
+            </div><!--product-card-->
+        </div><!--product-container-->
+        <br>
+        <h3 class="product-category">Apple</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/card04.png" class="product-thumb" alt="product card">
+                    <p class="card-btn">add to whislist</p>
+                </div><!--product-image-->
+                <div class="product-info">
+                    <h2 class="product-brand">Mac-Book Pro</h2>
+                    <p class="product-short-des">Quad-core i7</p>
+                    <span class="price">$429</span>
+                </div><!--product-info-->
+            </div><!--product-card-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/card05.png" class="product-thumb" alt="product card">
+                    <p class="card-btn">add to whislist</p>
+                </div><!--product-image-->
+                <div class="product-info">
+                    <h2 class="product-brand">27" iMac® with Retina</h2>
+                    <p class="product-short-des">5K display</p>
+                    <span class="price">$1,799</span>
+                </div><!--product-info-->
+            </div><!--product-card-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/card06.png" class="product-thumb" alt="product card">
+                    <p class="card-btn">add to whislist</p>
+                </div><!--product-image-->
+                <div class="product-info">
+                    <h2 class="product-brand">16.2" MacBook Pro</h2>
+                    <p class="product-short-des">M1 Max Chip</p>
+                    <span class="price">$3,499</span>
+                </div><!--product-info-->
+            </div><!--product-card-->
+        </div><!--product-container-->
+    </section><!--product-->
+    <footer>
+        <p class="footer-title">about company</p>
+        <p class="info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat tempore
+             ad suscipit, eos eius quisquam sed optio nisi quaerat fugiat ratione et 
+             vero maxime praesentium, architecto minima reiciendis iste quo deserunt 
+             assumenda alias ducimus. Ullam odit maxime id voluptates rerum tenetur 
+             corporis laboriosam! Cum error ipsum laborum tempore in rerum 
+             necessitatibus nostrum nobis modi! Debitis adipisci illum nemo aperiam sed, 
+             et accusamus ut officiis. Laborum illo exercitationem quo culpa reprehenderit 
+             excepturi distinctio tempore cupiditate praesentium nisi ut iusto, assumenda 
+             perferendis facilis voluptas autem fuga sunt ab debitis voluptatum harum eum. 
+             Asperiores, natus! Est deserunt incidunt quasi placeat omnis, itaque harum?
+        </p>
+    </footer>
+    <div class="sidebar" id="mySidebar">
+        <button onclick="closeSidebar()" class="menu">Close &times;</button>
+        <a href="../index.html"><img src="./img/logo.png" alt="logo" class="logo"></a>
+        <ul class="sidebar-links">
+            <li class="sidebar-item"><a href="#" class="link">home</a></li>
+            <li class="sidebar-item"><a href="#" class="link">hp</a></li>
+            <li class="sidebar-item"><a href="#" class="link">apple</a></li>
+            <li class="sidebar-item"><a href="#" class="link">accessories</a></li>
+        </ul>
+    </div><!--sidebar-->
+</body>
