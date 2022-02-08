@@ -7,7 +7,6 @@
 }
 
 .logo{
-    height: 40px;
     max-width:100%;
     flex: auto;
 }
@@ -46,7 +45,6 @@
 .hero-section{
     width: 100%;
     height: calc(100vh - 120px);
-    background-image: url('./img/header.png');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -64,22 +62,96 @@
     font-weight: 300;
 }
 
+#home {
+    background-image: url('./img/header-home.png');
+}
+#academics {
+    background-image: url('./img/header-academics.png');
+}
+#arts {
+    background-image: url('./img/header-arts.png');
+}
+#arts .sub-heading{
+    -webkit-text-stroke: 1.5px black;
+    font-size: 50px;
+}
+#athletics {
+    background-image: url('./img/header-athletics.png');
+}
+#university {
+    background-image: url('./img/header-university.png');
+}
+
 .content-container {
-    display: grid;
+    display: flex;
     grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 200px 200px 1fr;
 }
 
 .sidebar-left{
     grid-column: 1;
-    border-style: dashed;
 }
 
 .main{
     grid-column: 2;
-    border-style: dashed;
+    margin: 10px;
 }
 
 .sidebar-right{
-    grid-column: 2;
-    border-style: dashed;
+    grid-column: 3;
+}
+
+.card-container{
+    display: grid;
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+.card{
+    border-style: groove;
+    border-color: #8b3800;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.card:hover{
+    background-color: lightgray;
+}
+
+.card img{
+    border-radius: 100%;
+    width: 100px;
+}
+
+.card p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*footer*/
+footer{
+    border-radius: 5px;
+    position: relative;
+    padding: 40px 10vw;
+    padding-bottom: 40px;
+    background-color:#8b3800;
+}
+
+.footer-title{
+    margin-top: 30px;
+}
+
+.footer-title, .info{
+    color: rgba(0, 0, 0, 0.75);
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 800px) {
+    .content-container{
+        flex-direction: column;
+    }
+
+    .card{
+        grid-row: 1;
+    }
 }

@@ -4,7 +4,7 @@ const createHeader = () => {
     nav.innerHTML = `
         <div class="nav">
             <img src="img/logo.png" class="brand-logo" alt="logo">
-            <p class=title>Fictitious University</p>
+            <h1 class=title>Fictitious University</h1>
         </div>
         <ul class="links-container">
             <li><a href="./assign06.html" class = 'link'>Home</a></li>
