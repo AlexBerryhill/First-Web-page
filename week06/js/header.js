@@ -8,6 +8,7 @@ const createHeader = () => {
         </div>
         <ul class="links-container">
             <li><a href="./assign06.html" class = 'link'>Home</a></li>
+            <li><a href="../index.html" class = 'link'>Index</a></li>
             <li><a href="./academics.html" class = 'link'>Academics</a></li>
             <li><a href="./university.html" class='link'>University</a></li>
             <li><a href="./athletics.html" class='link'>Athletics</a></li>
