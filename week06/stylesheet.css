@@ -88,8 +88,13 @@
     grid-template-rows: 200px 200px 1fr;
 }
 
-.sidebar-left{
+.left-sidebar{
     grid-column: 1;
+}
+
+.left-sidebar .card{
+    border-radius: 100%;
+    text-align: center;
 }
 
 .main{
@@ -97,7 +102,7 @@
     margin: 10px;
 }
 
-.sidebar-right{
+.right-sidebar{
     grid-column: 3;
 }
 
@@ -107,10 +112,21 @@
     margin: 10px;
 }
 
+.main-card{
+    border-style: groove;
+    margin-top: 10px;
+}
+
+.main-card #title{
+    text-transform: capitalize;
+    text-decoration:underline;
+    font-weight: 200;
+    font-size: larger;
+}
+
 .card{
     border-style: groove;
     border-color: #8b3800;
-    border-radius: 5px;
     padding: 5px;
 }
 
