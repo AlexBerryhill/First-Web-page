@@ -124,13 +124,6 @@
     padding: 10px;
 }
 
-.main-card #title{
-    text-transform: capitalize;
-    text-decoration:underline;
-    font-weight: 200;
-    font-size: larger;
-}
-
 .card{
     border-style: groove;
     border-color: #8b3800;
