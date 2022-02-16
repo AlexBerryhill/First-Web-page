@@ -47,3 +47,20 @@
 .link:hover{
     opacity: 1;
 }
+
+.form{
+    max-width: 80%;
+    margin: auto;
+    border-style: groove;
+    border-radius: 5px;
+    border-color: #8b3800;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+input{
+    margin: 10px;
+}
