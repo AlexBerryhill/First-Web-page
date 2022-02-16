@@ -18,8 +18,9 @@
     color:#8b3800;
     flex: auto;
 }
+
 .links-container{
-    width: 98%;
+    width: 100%;
     display: flex;
     padding: 10px;
     justify-content: center;
