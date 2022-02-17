@@ -15,13 +15,13 @@
     <div class="form">
         <form action="">
             <label for="apr">APR:</label>
-            <input type="text" name="apr" id="apr">
+            <input type="text" name="apr" id="apr" required>
             <label for="term">Loan Term:</label>
-            <input type="text" name="term" id="term">
+            <input type="text" name="term" id="term" required>
             <label for="amount">Loan Amount:</label>
-            <input type="text" name="amount" id="amount">
+            <input type="text" name="amount" id="amount" required>
             <label for="payment">Monthly Payment:</label>
-            <input type="text" name="apr" id="apr" readonly>
+            <input type="text" name="payment" id="payment" value='' readonly>
             <input type="reset" value="Reset" id="clear">
             <input type="button" id="calculate" value="Calculate">
         </form>
