@@ -7,11 +7,11 @@
     <link rel="icon" href="./img/logo.png" type="image/png">
     <meta name="description" content="Fictitious University provides the very best Fiction and nonsense degrees">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="form.js"></script>
 </head>
 <body>
     <nav class="nav"></nav>
     <script src="js/nav.js"></script>
+    <script src="js/form.js"></script>
     <div class="form">
         <form action="">
             <label for="apr">APR:</label>
@@ -21,9 +21,9 @@
             <label for="amount">Loan Amount:</label>
             <input type="text" name="amount" id="amount" required>
             <label for="payment">Monthly Payment:</label>
-            <input type="text" name="payment" id="payment" value='' readonly>
+            <input type="text" name="payment" id="payment" value='wth' readonly>
             <input type="reset" value="Reset" id="clear">
-            <input type="button" id="calculate" value="Calculate">
+            <input type="button" onclick="calcMonthlyPayment()" id="calculate" value="Calculate">
         </form>
     </div>
 </body>
