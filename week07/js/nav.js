@@ -12,7 +12,7 @@ const createNav = () => {
             <li><a href="#" class = 'link'>APR</a></li>
             <li><a href="#" class = 'link'>Loan Term</a></li>
             <li><a href="#" class = 'link'>Loan Amount</a></li>
-            <li><a href="#" class = 'link'>Monthly Payment</a></li>
+            <li><a href="./assign07.html" class = 'link'>Monthly Payment</a></li>
         </ul>
     `;
 }

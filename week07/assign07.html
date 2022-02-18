@@ -15,14 +15,14 @@
     <div class="form">
         <form action="">
             <label for="apr">APR:</label>
-            <input type="text" name="apr" id="apr" oninput="valApr()">
-            <p id="aprError"></p>
+            <input type="text" name="apr" id="apr" oninput="valApr()" onchange="calcMonthlyPayment()">
+            <p class="error-message" id="aprError"></p>
             <label for="term">Loan Term:</label>
-            <input type="text" name="term" id="term" oninput="valTerm()">
-            <p id="termError"></p>
+            <input type="text" name="term" id="term" oninput="valTerm();calcMonthlyPayment()">
+            <p class="error-message" id="termError"></p>
             <label for="amount">Loan Amount:</label>
-            <input type="text" name="amount" id="amount" oninput="valAmount()">
-            <p id="amountError"></p>
+            <input type="text" name="amount" id="amount" oninput="valAmount();calcMonthlyPayment()">
+            <p class="error-message" id="amountError"></p>
             <label for="payment">Monthly Payment:</label>
             <input type="text" name="payment" id="payment" value='wth' readonly>
             <input type="reset" value="Reset" id="clear">
