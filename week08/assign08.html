@@ -6,6 +6,7 @@
     <title style="font-family: Arial, Helvetica, sans-serif;">Buisness Site</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="js/home.js"></script>
+    <script src="js/form.js"></script>
 </head>
 <body>
     <nav id="navbar">
@@ -37,12 +38,12 @@
         <h2 class="product-category">best selling</h2>
         <button class="pre-btn"><img src="img/arrow.png" alt="arrow"></button>
         <button class="nxt-btn"><img src="img/arrow.png" alt="arrow"></button>
-        <div class="product-container" onclick="location.href='./assign08_2.html'">
+        <div class="product-container" onclick="openForm()">
             <div class="product-card">
                 <div class="product-image">
                     <span class="discount-tag">50% off</span>
                     <img src="img/card01.png" class="product-thumb" alt="product card">
-                    <p class="card-btn">add to whislist</p>
+                    <p class="card-btn">add to wishlist</p>
                 </div><!--product-image-->
                 <div class="product-info">
                     <h2 class="product-brand">Skatebolt</h2>
@@ -54,7 +55,7 @@
                 <div class="product-image">
                     <span class="discount-tag">50% off</span>
                     <img src="img/card02.png" class="product-thumb" alt="product card">
-                    <p class="card-btn">add to whislist</p>
+                    <p class="card-btn">add to wishlist</p>
                 </div><!--product-image-->
                 <div class="product-info">
                     <h2 class="product-brand">Backfire</h2>
@@ -116,4 +117,62 @@
         </div>
         <p class="footer-credit">Alex Berryhill's Skateboard shop</p>
     </footer>
+    <div class="form" style="display: none;" id="myForm">
+        <div class="container">
+            <header>
+                <span>Introduce yourself</span>
+                <button onclick="closeForm()" class="form-btn" id="close"><b>&times;</b></button>
+            </header>
+            <section class="product-details">
+                <div class="image-slider">
+                    <div class="product-images">
+                        <img src="img/product_image_1.png" class="active" alt="board">
+                        <img src="img/product_image_2.png" alt="performance">
+                        <img src="img/product_image_3.png" alt="motor">
+                        <img src="img/product_image_4.png" alt="battery">
+                    </div>
+                </div>
+                <div class="details">
+                    <h2 class="product-brand">Skatebolt</h2>
+                    <p class="product-short-des">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    <span class="product-price">$700</span>
+                    <span class="product-actual-price">$1400</span>
+                    <span class="product-discount">( 50% off )</span>        
+                    <button class="btn cart-btn" onclick="window.location.href='#cart'">add to cart</button>
+                    <button class="btn">add to wishlist</button>
+                </div>
+            </section>
+            <section class="detail-des">
+                <h2 class="heading">description</h2>
+                <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ......</p>
+            </section>
+            <form id="cart">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name">
+                <label for="address">Address</label>
+                <input type="textarea" name="address">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone">
+                <input type="checkbox" name="item_0" id="also_buy">
+                <input type="checkbox" name="item_1" id="also_buy">
+                <input type="checkbox" name="item_2" id="also_buy">
+                <input type="checkbox" name="item_3" id="also_buy">
+                <input type="text" name="total" readonly>
+                <label for="card">Visa</label>
+                <input type="radio" name="card" id="">
+                <label for="card">Mastercard</label>
+                <input type="radio" name="card" id="">
+                <label for="card">American Express</label>
+                <input type="radio" name="card" id="">
+                <label for="credit_card">Credit Card Number</label>
+                <input type="text" name="credit_card">
+                <label for="exp_date">Expiration Date</label>
+                <input type="text" name="exp_date" placeholder="MM/YYYY">
+                <button type="reset">Reset</button>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
