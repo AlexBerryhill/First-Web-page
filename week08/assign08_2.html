@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font-family: Arial, Helvetica, sans-serif;">Buisness Site</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="js/home.js"></script>
+    <style>
+        .product-details{
+            width: 100%;
+            padding: 60px 10vw;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-slider{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-image: url('./img/product_image_1.png');
+            background-size: cover;
+        }
+
+        .product-images{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            background: #fff;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 100px;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .product-images img{
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .product-images img.active{
+            opacity: 0.5;
+        }
+        .details{
+            width: 50%;
+        }
+
+        .details .product-brand{
+            text-transform: capitalize;
+            font-size: 30px;
+        }
+
+        .details .product-short-des{
+            font-size: 25px;
+            line-height: 30px;
+            height: auto;
+            margin: 15px 0 30px;
+        }
+
+        .product-price{
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .product-actual-price{
+            font-size: 30px;
+            opacity: 0.5;
+            text-decoration: line-through;
+            margin: 0 20px;
+            font-weight: 300;
+        }
+
+        .product-discount{
+            color: #ff7d7d;
+            font-size: 20px;
+        }
+
+        .product-sub-heading{
+            font-size: 30px;
+            text-transform: uppercase;
+            margin: 60px 0 10px;
+            font-weight: 300;
+        }
+
+        .btn{
+            width: 48%;
+            padding: 20px;
+            border-radius: 5px;
+            background: none;
+            border: 1px solid #383838;
+            color: #383838;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 20px 0;
+            text-transform: capitalize;
+        }
+
+        .cart-btn{
+            margin-right: 2%;
+            background: #383838;
+            color: #fff;
+        }
+
+        .detail-des{
+            padding: 0 10vw;
+            text-transform: capitalize;
+        }
+
+        .heading{
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .des{
+            color: #383838;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav">
+            <a href="./assign04.html"><img src="img/dark-logo.png" class="brand-logo" alt=""></a>
+            <div class="nav-items">
+                <div class="search">
+                    <input type="text" class="search-box" placeholder="search brand, product">
+                    <button class="search-btn">search</button>
+                </div>
+                <a href="#"><img src="img/user.png" alt="user"></a>
+                <a href="#"><img src="img/cart.png" alt="cart"></a>
+            </div><!--nav-items-->
+        </div><!--nav-->
+    </nav><!--navbar-->
+    <ul class="links-container">
+        <li class="link-item"><a href="./assign04.html" class="link">home</a></li>
+        <li class="link-item"><a href="#" class="link">women</a></li>
+        <li class="link-item"><a href="#" class="link">men</a></li>
+        <li class="link-item"><a href="#" class="link">kids</a></li>
+        <li class="link-item"><a href="#" class="link">accessories</a></li>
+    </ul>
+    <section class="product-details">
+        <div class="image-slider">
+            <div class="product-images">
+                <img src="img/product_image_1.png" class="active" alt="board">
+                <img src="img/product_image_2.png" alt="performance">
+                <img src="img/product_image_3.png" alt="motor">
+                <img src="img/product_image_4.png" alt="battery">
+            </div>
+        </div>
+        <div class="details">
+            <h2 class="product-brand">Skatebolt</h2>
+            <p class="product-short-des">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <span class="product-price">$700</span>
+            <span class="product-actual-price">$1400</span>
+            <span class="product-discount">( 50% off )</span>        
+            <button class="btn cart-btn">add to cart</button>
+            <button class="btn">add to wishlist</button>
+        </div>
+    </section>
+    <section class="detail-des">
+        <h2 class="heading">description</h2>
+        <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ......</p>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <img src="img/light-logo.png" class="logo" alt="">
+            <div class="footer-ul-container">
+                <ul class="category">
+                    <li class="category-title">adult</li>
+                    <li><a href="#" class="footer-link">boards</a></li>
+                    <li><a href="#" class="footer-link">kits</a></li>
+                    <li><a href="#" class="footer-link">controllers</a></li>
+                    <li><a href="#" class="footer-link">decals</a></li>
+                    <li><a href="#" class="footer-link">parts</a></li>
+                    <li><a href="#" class="footer-link">clothes</a></li>
+                </ul>
+                <ul class="category">
+                    <li class="category-title">kids</li>
+                    <li><a href="#" class="footer-link">boards</a></li>
+                    <li><a href="#" class="footer-link">kits</a></li>
+                    <li><a href="#" class="footer-link">controllers</a></li>
+                    <li><a href="#" class="footer-link">decals</a></li>
+                    <li><a href="#" class="footer-link">parts</a></li>
+                    <li><a href="#" class="footer-link">clothes</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-title">about company</p>
+        <p class="info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat tempore
+             ad suscipit, eos eius quisquam sed optio nisi quaerat fugiat ratione et 
+             vero maxime praesentium, architecto minima reiciendis iste quo deserunt 
+             assumenda alias ducimus. Ullam odit maxime id voluptates rerum tenetur 
+             corporis laboriosam! Cum error ipsum laborum tempore in rerum 
+             necessitatibus nostrum nobis modi! Debitis adipisci illum nemo aperiam sed, 
+             et accusamus ut officiis. Laborum illo exercitationem quo culpa reprehenderit 
+             excepturi distinctio tempore cupiditate praesentium nisi ut iusto, assumenda 
+             perferendis facilis voluptas autem fuga sunt ab debitis voluptatum harum eum. 
+             Asperiores, natus! Est deserunt incidunt quasi placeat omnis, itaque harum?
+        </p>
+        <p class="info">support emails - help@skateboards.com, customersupport@skateboards.com</p>
+        <p class="info">telephone - (555)555-555, (555)555-554</p>
+        <div class="footer-social-container">
+            <div>
+                <a href="#" class="social-link">terms & services</a>
+                <a href="#" class="social-link">privacy page</a>
+            </div>
+            <div>
+                <a href="#" class="social-link">instagram</a>
+                <a href="#" class="social-link">facebook</a>
+                <a href="#" class="social-link">twitter</a>
+            </div>
+        </div>
+        <p class="footer-credit">Alex Berryhill's Skateboard shop</p>
+    </footer>
+</body>
