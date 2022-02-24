@@ -155,17 +155,37 @@
                 <input type="textarea" name="address">
                 <label for="phone">Phone Number</label>
                 <input type="text" name="phone">
-                <input type="checkbox" name="item_0" id="also_buy">
-                <input type="checkbox" name="item_1" id="also_buy">
-                <input type="checkbox" name="item_2" id="also_buy">
-                <input type="checkbox" name="item_3" id="also_buy">
+                <div class="accessory-container">
+                    <div class="accessory-thumb">
+                        <span class="accessory-price">$10</span>
+                        <img src="./img/accessory01.jpg" class="accessory-img" alt="safety">
+                        <input type="checkbox" name="item_0" id="item_0">
+                    </div>
+                    <div class="accessory-thumb">
+                        <span class="accessory-price">$10</span>
+                        <img src="./img/accessory02.jpg" class="accessory-img" alt="dirt remover">
+                        <input type="checkbox" name="item_1" id="item_1">
+                    </div>
+                    <div class="accessory-thumb">
+                        <span class="accessory-price">$10</span>
+                        <img src="./img/accessory03.jpg" class="accessory-img" alt="lights">
+                        <input type="checkbox" name="item_2" id="item_2">
+                    </div>
+                    <div class="accessory-thumb">
+                        <span class="accessory-price">$10</span>
+                        <img src="./img/accessory04.jpg" class="accessory-img" alt="practice">
+                        <input type="checkbox" name="item_3" id="item_3">
+                    </div>
+                </div>
                 <input type="text" name="total" readonly>
-                <label for="card">Visa</label>
-                <input type="radio" name="card" id="">
-                <label for="card">Mastercard</label>
-                <input type="radio" name="card" id="">
-                <label for="card">American Express</label>
-                <input type="radio" name="card" id="">
+                <div>
+                    <input type="radio" name="card" id="card">
+                    <label for="card">Visa</label>
+                    <input type="radio" name="card" id="card">
+                    <label for="card">Mastercard</label>
+                    <input type="radio" name="card" id="card">
+                    <label for="card">American Express</label>
+                </div>
                 <label for="credit_card">Credit Card Number</label>
                 <input type="text" name="credit_card">
                 <label for="exp_date">Expiration Date</label>

@@ -318,7 +318,7 @@
     position:static;
 }
 
-input[type=text], select, textarea {
+input[type=text], select, input[type=textarea]{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -326,12 +326,12 @@ input[type=text], select, textarea {
     resize: vertical;
   }
   
-  label {
+label {
     padding: 12px 12px 12px 0;
     display: inline-block;
-  }
+}
 
-  .product-details{
+.product-details{
     width: 100%;
     padding: 60px 10vw;
     display: flex;
@@ -450,6 +450,41 @@ input[type=text], select, textarea {
     padding: 20px;
     display: flex;
     flex-direction: column;
+}
+
+.accessory-container{
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.accessory-container::-webkit-scrollbar{
+    display: none;
+}
+
+.accessory-price{
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #000000;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.accessory-img{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.accessory-thumb{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
 }
 
 /*footer*/
