@@ -138,7 +138,7 @@
                     <span class="product-price">$700</span>
                     <span class="product-actual-price">$1400</span>
                     <span class="product-discount">( 50% off )</span>        
-                    <button class="btn cart-btn" onclick="window.location.href='#cart'">add to cart</button>
+                    <button class="btn cart-btn" id="add_to_cart">add to cart</button>
                     <button class="btn">add to wishlist</button>
                 </div>
             </section>
@@ -146,55 +146,66 @@
                 <h2 class="heading">description</h2>
                 <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ......</p>
             </section>
-            <form id="cart">
+            <form id="cart" onsubmit="return validateSubmit();">
                 <label for="first_name">First Name</label>
-                <input type="text" name="first_name">
+                <input type="text" name="first_name" id="first_name" required>
                 <label for="last_name">Last Name</label>
-                <input type="text" name="last_name">
+                <input type="text" name="last_name" id="last_name" required>
                 <label for="address">Address</label>
-                <input type="textarea" name="address">
+                <input type="textarea" name="address" placeholder="street address, city, state, and zip" required>
                 <label for="phone">Phone Number</label>
-                <input type="text" name="phone">
+                <input type="text" name="phone" id="phone" placeholder="208-555-5555" required>
+                <p class="error" id="phoneError"></p>
                 <div class="accessory-container">
-                    <div class="">
-                        <div class="accessory-image">
-                            <span class="accessory-price">$10</span>
+                    <div class="accessory-card">
+                        <div class="accessory-image" onclick="checkAccessory('item_0')">
+                            <span class="accessory-price">$5</span>
                             <img src="./img/accessory01.jpg" class="accessory-thumb" alt="safety">
-                            <input type="checkbox" name="item_0" id="item_0">
                         </div>
+                        <input type="checkbox" name="item_0" id="item_0" onclick="calcTotal()">
                     </div>
-                    <div class="accessory-thumb">
-                        <span class="accessory-price">$10</span>
-                        <img src="./img/accessory02.jpg" class="accessory-img" alt="dirt remover">
-                        <input type="checkbox" name="item_1" id="item_1">
+                    <div class="accessory-card">
+                        <div class="accessory-image" onclick="checkAccessory('item_1')">
+                            <span class="accessory-price">$10</span>
+                            <img src="./img/accessory02.jpg" class="accessory-thumb" alt="dirt remover">
+                        </div>
+                        <input type="checkbox" name="item_1" id="item_1" onclick="calcTotal()">
                     </div>
-                    <div class="accessory-thumb">
-                        <span class="accessory-price">$10</span>
-                        <img src="./img/accessory03.jpg" class="accessory-img" alt="lights">
-                        <input type="checkbox" name="item_2" id="item_2">
+                    <div class="accessory-card">
+                        <div class="accessory-image" onclick="checkAccessory('item_2')">
+                            <span class="accessory-price">$15</span>
+                            <img src="./img/accessory03.jpg" class="accessory-thumb" alt="lights">
+                        </div>
+                        <input type="checkbox" name="item_2" id="item_2" onclick="calcTotal()">
                     </div>
-                    <div class="accessory-thumb">
-                        <span class="accessory-price">$10</span>
-                        <img src="./img/accessory04.jpg" class="accessory-img" alt="practice">
-                        <input type="checkbox" name="item_3" id="item_3">
+                    <div class="accessory-card">
+                        <div class="accessory-image"onclick="checkAccessory('item_3')">
+                            <span class="accessory-price">$20</span>
+                            <img src="./img/accessory04.jpg" class="accessory-thumb" alt="practice">
+                        </div>
+                        <input type="checkbox" name="item_3" id="item_3" onclick="calcTotal()">
                     </div>
                 </div>
-                <input type="text" name="total" readonly>
+                <label for="total">Total</label>
+                <input type="text" name="total" id="total" value='$700.00' readonly>
                 <div>
-                    <input type="radio" name="card" id="card">
+                    <input type="radio" name="card" id="visa" required>
                     <label for="card">Visa</label>
-                    <input type="radio" name="card" id="card">
+                    <input type="radio" name="card" id="mastercard" required>
                     <label for="card">Mastercard</label>
-                    <input type="radio" name="card" id="card">
+                    <input type="radio" name="card" id="american_express" required>
                     <label for="card">American Express</label>
                 </div>
                 <label for="credit_card">Credit Card Number</label>
-                <input type="text" name="credit_card">
+                <input type="text" name="credit_card" id="credit_card" onchange="creditCardValidation()" placeholder="1111 1111 1111 1111" required>
+                <p class="error" id="cardError"></p>
                 <label for="exp_date">Expiration Date</label>
-                <input type="text" name="exp_date" placeholder="MM/YYYY">
+                <input type="text" name="exp_date" id="exp_date" onchange="expDateValidation()" placeholder="MM/YYYY" required>
+                <p class="error" id="expError"></p>
                 <button type="reset">Reset</button>
-                <button>Submit</button>
+                <button type="submit" name="validate">Submit</button>
             </form>
+            <script>setUpForm()</script>
         </div>
     </div>
 </body>
