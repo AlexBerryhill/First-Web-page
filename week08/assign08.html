@@ -152,7 +152,7 @@
                 <label for="last_name">Last Name</label>
                 <input type="text" name="last_name" id="last_name" required>
                 <label for="address">Address</label>
-                <input type="textarea" name="address" placeholder="street address, city, state, and zip" required>
+                <textarea name="address" id="address" placeholder="street address, city, state, and zip" required></textarea>
                 <label for="phone">Phone Number</label>
                 <input type="text" name="phone" id="phone" placeholder="208-555-5555" required>
                 <p class="error" id="phoneError"></p>
@@ -179,7 +179,7 @@
                         <input type="checkbox" name="item_2" id="item_2" onclick="calcTotal()">
                     </div>
                     <div class="accessory-card">
-                        <div class="accessory-image"onclick="checkAccessory('item_3')">
+                        <div class="accessory-image" onclick="checkAccessory('item_3')">
                             <span class="accessory-price">$20</span>
                             <img src="./img/accessory04.jpg" class="accessory-thumb" alt="practice">
                         </div>
@@ -189,11 +189,11 @@
                 <label for="total">Total</label>
                 <input type="text" name="total" id="total" value='$700.00' readonly>
                 <div>
-                    <input type="radio" name="card" id="visa" required>
+                    <input type="radio" name="card" id="card" required>
                     <label for="card">Visa</label>
-                    <input type="radio" name="card" id="mastercard" required>
+                    <input type="radio" name="card" id="card" required>
                     <label for="card">Mastercard</label>
-                    <input type="radio" name="card" id="american_express" required>
+                    <input type="radio" name="card" id="card" required>
                     <label for="card">American Express</label>
                 </div>
                 <label for="credit_card">Credit Card Number</label>
