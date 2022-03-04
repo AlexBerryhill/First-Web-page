@@ -7,14 +7,45 @@
     <meta name="description" content="Find the biggest cities in various countries">
     <link rel="icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="js/home.js"></script>
+    
 </head>
 <body>
     <nav class="navbar"></nav>
     <script src="js/nav.js"></script>
-    <div id="">
-
+    <div id="country_grid">
+        <div class="flag" id="usa" onclick="populateTable('txt/usa.txt')">
+            <div class="flag_text"><p>USA</p></div>
+        </div>
+        <div class="flag" id="canada" onclick="populateTable('txt/canada.txt')">
+            <div class="flag_text"><p>Canada</p></div>
+        </div>
+        <div class="flag" id="mexico" onclick="populateTable('txt/mexico.txt')">
+            <div class="flag_text"><p>Mexico</p></div>
+        </div>
+        <div class="flag" id="russia" onclick="populateTable('txt/russia.txt')">
+            <div class="flag_text"><p>Russia</p></div>
+        </div>
     </div>
+    <h1 style = "color:green;"> 
+        GeeksForGeeks 
+    </h1>
+     
+    <p id = "GFG_UP" style =
+            "font-size: 15px; font-weight: bold;">
+    </p>
+ 
+     
+    <button onclick = "GFG_FUN()">
+        click here
+    </button>
+     
+    <br><br>
+     
+    <table id="table"></table>
+     
+    <table id="table">
+    </table>
+    <script src="js/table.js"></script>
     <footer class="footer"></footer>
     <script src="js/footer.js"></script>
 </body>

@@ -100,6 +100,51 @@
     opacity: 1;
 }
 
+/*Biggest Cities*/
+#country_grid{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+}
+
+.flag{
+    height: 25vh;
+    border-style: groove;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 80%;
+    padding: auto;
+}
+
+.flag:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+
+#usa{
+    background-image: url('./img/usa.png');
+}
+
+#canada{
+    background-image: url('./img/canada.png');
+}
+
+#mexico{
+    background-image: url('./img/mexico.png');
+}
+
+#russia{
+    background-image: url('./img/russia.png');
+}
+
+.flag_text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+}
+
 /*footer*/
 footer{
     position: relative;
