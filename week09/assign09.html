@@ -25,27 +25,19 @@
         <div class="flag" id="russia" onclick="populateTable('txt/russia.txt')">
             <div class="flag_text"><p>Russia</p></div>
         </div>
+    </div><!--country_grid-->
+    <pre id = "city_list"></pre>
+    <script src="js/ajax.js"></script>
+
+    <br>
+
+    <label for="filename">Filename</label>
+    <div class="search">
+        <input type="text" class="search-box" name="filename" id="filename" value="json.txt" placeholder="search filename">
+        <button class="search-btn" onclick="searchFile()">search</button>
     </div>
-    <h1 style = "color:green;"> 
-        GeeksForGeeks 
-    </h1>
-     
-    <p id = "GFG_UP" style =
-            "font-size: 15px; font-weight: bold;">
-    </p>
- 
-     
-    <button onclick = "GFG_FUN()">
-        click here
-    </button>
-     
-    <br><br>
-     
-    <table id="table"></table>
-     
-    <table id="table">
-    </table>
-    <script src="js/table.js"></script>
+    <div id="json_list"></div>
+
     <footer class="footer"></footer>
     <script src="js/footer.js"></script>
 </body>
