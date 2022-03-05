@@ -16,7 +16,7 @@ function searchFile(){
         filename = file;
     }
     else{
-        filename = './txt/'+document.getElementById('filename').value;
+        filename = './txt/'+file;
     }
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
