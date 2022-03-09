@@ -40,12 +40,6 @@ function valAmount(){
       }
 }
 
-function calcMonthlyPayment(){
-    if(valApr()&&valTerm()&&valAmount()){
-        var i = document.getElementById('apr').value/100/12;
-        var n = document.getElementById('term').value*12;
-        var a = document.getElementById('amount').value;
-        var x = (1+i)**n
-        document.getElementById('payment').value="$"+parseFloat((a*x*i)/(x-1)).toFixed(2);
-    }
+function validateMonthlyPayment(){
+    return(valApr()&&valTerm()&&valAmount())
 }

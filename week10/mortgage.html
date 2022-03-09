@@ -13,11 +13,9 @@
     <nav class="navbar"></nav>
     <script src="js/nav.js"></script>
     <script src="js/form.js"></script>
-    <?php
-    echo "Hello World!";
-    ?>
+    
     <div class="form">
-        <form action="mortgage.php" method="GET" onreset="reset()">
+        <form onsubmit="return validateMonthlyPayment()" action="./mortgage.php" method="get" onreset="reset()">
             <label for="apr">APR:</label>
             <input type="text" name="apr" class="formInput" id="apr" oninput="valApr()">
             <p class="error-message" id="aprError"></p>
@@ -27,10 +25,8 @@
             <label for="amount">Loan Amount:</label>
             <input type="text" name="amount" class="formInput" id="amount" oninput="valAmount()">
             <p class="error-message" id="amountError"></p>
-            <label for="payment">Monthly Payment:</label>
-            <input type="text" name="payment" class="formInput" id="payment" value='' readonly>
             <input type="reset" value="Reset" class="formInput" id="clear">
-            <input type="button" onclick="calcMonthlyPayment()" class="formInput" id="calculate" value="Calculate">
+            <input type="submit" class="formInput" id="calculate" value="Calculate">
         </form>
     </div>
 
