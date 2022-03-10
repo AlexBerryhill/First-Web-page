@@ -130,6 +130,17 @@
     opacity: 70%;
 }
 
+/*Table*/
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+td {
+    border-style: groove;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 /*footer*/
 footer{
     position: relative;

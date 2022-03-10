@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,16 @@
     <meta name="description" content="Find your monthly payment with PHP">
     <link rel="icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="stylesheet.css">
-    
+
 </head>
+
 <body>
     <nav class="navbar"></nav>
     <script src="js/nav.js"></script>
     <script src="js/form.js"></script>
-    
+
     <div class="form">
-        <form onsubmit="return validateMonthlyPayment()" action="./mortgage.php" method="get" onreset="reset()">
+        <form onsubmit="return validateMonthlyPayment();" action="./mortgage.php" method="get" onreset="reset()">
             <label for="apr">APR:</label>
             <input type="text" name="apr" class="formInput" id="apr" oninput="valApr()">
             <p class="error-message" id="aprError"></p>
