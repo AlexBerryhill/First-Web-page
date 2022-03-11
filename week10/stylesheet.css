@@ -141,6 +141,10 @@ td {
     padding: 5px;
 }
 
+tr:hover {
+    background-color: #979797;
+}
+
 /*footer*/
 footer{
     position: relative;

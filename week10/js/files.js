@@ -3,11 +3,12 @@ function loadPHP() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let files = JSON.parse(this.responseText);
-            let table = "<table><tr><th>FileName</th><th>FileType</th><th>FilePath</th></tr>"
+            let table = "<table><tr><th>FileName</th><th>FileType</th><th>FilePath</th><th>File Link</th></tr>"
             for (let i=0;i<files.length;i++){
-                table += "<tr><td>"+files[i].fileName+"</td>"
+                table += "<tr><td><a href='"+String(files[i].fileName)+"' target='_blank'>"+files[i].fileName+"</a></td>"
                 table += "<td>"+files[i].fileType+"</td>"
-                table += "<td>"+files[i].cwd+"</td></tr>"
+                table += "<td>"+files[i].cwd+"</td>"
+                table += "<td><a href='"+String(files[i].fileName)+"' target='_blank'>"+files[i].fileName+"</a></td></tr>"
             }
             table += "</table>"
             document.getElementById("demo").innerHTML =table
