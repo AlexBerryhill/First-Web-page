@@ -27,14 +27,17 @@ function setUpForm(){
 
   document.getElementById("cart").addEventListener('reset', function() {
     document.getElementById('first_name').focus();
+    formReset();
   });
-
-  document.getElementById("cart").addEventListener('submit', function() {
-    validateSubmit();
-  });
-
+  
   document.getElementById("phone").addEventListener('change', function() {
     phoneValidation();
+  });
+
+  document.getElementById("cart").addEventListener('submit', function(e) {
+    if (!validateSubmit()) {
+      e.preventDefault();
+    }
   });
 }
 
@@ -103,7 +106,7 @@ function expDateValidation() {
   let yearPattern = /\d{4}/
   var month = String(expDate.match(monthPattern)).match(monthToInt)
   var year = expDate.match(yearPattern)
-  if (expDate.search(pattern)==0 && month >= 1 && month <= 12 && year >= 2020){
+  if (expDate.search(pattern)==0 && month >= 1 && month <= 12 && year > 2020){
     document.getElementById('expError').innerHTML =''
     return true
   }
@@ -130,4 +133,10 @@ function validateSubmit(){
   else{
     return true
   }
+}
+
+function formReset(){
+  document.getElementById('phoneError').innerHTML =''
+  document.getElementById('cardError').innerHTML =''
+  document.getElementById('expError').innerHTML =''
 }

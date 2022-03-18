@@ -514,6 +514,16 @@ label {
     background-color: #9b9b9b;
 }
 
+/*Results*/
+.results{
+    width: 80vw;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    border-style: groove;
+    border-radius: 5px;
+}
+
 /*footer*/
 footer{
     position: relative;

@@ -16,7 +16,7 @@
     <script src="js/form.js"></script>
 
     <div class="form">
-        <form onsubmit="return validateMonthlyPayment();" action="./mortgage.php" method="get" onreset="reset()">
+        <form onsubmit="validateMonthlyPayment();" action="./mortgage.php" method="get" onreset="reset()">
             <label for="apr">APR:</label>
             <input type="text" name="apr" class="formInput" id="apr" oninput="valApr()">
             <p class="error-message" id="aprError"></p>
