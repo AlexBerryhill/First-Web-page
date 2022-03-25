@@ -11,12 +11,12 @@ function submitForm(){
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var fileName = "/cgi-bin/cs213/mileageAjaxJSON"
+            alert(xhttp.responseText);
         }
         else if(this.status == 404){
 
         }
     };
-    xhttp.open("GET", fileName,true);
+    xhttp.open("GET", "/cgi-bin/cs213/mileageAjaxJSON",true);
     xhttp.send();
 }
