@@ -1,7 +1,7 @@
 function validateStartState(){
     let startState= document.getElementById("startState").value;
-    let pattern ='/[a-zA-Z]{2}/';
-    if(pattern.search(startState)>=0){
+    let pattern =/[a-zA-Z]{2}/;
+    if(startState.search(pattern)>=0){
         document.getElementById("start_error").innerHTML = "";
         return true;
     }
@@ -13,12 +13,9 @@ function validateStartState(){
 }
 
 function validateEndState(){
-    alert("hit")
     let endState= document.getElementById("endState").value;
-    alert(endState)
-    let pattern ='/[a-zA-Z]{2}/';
-    alert(pattern.search(endState))
-    if(pattern.search(endState)>=0){
+    let pattern =/[a-zA-Z]{2}/;
+    if(endState.search(pattern)>=0){
         document.getElementById("end_error").innerHTML = "";
         return true
     }
