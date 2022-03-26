@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title style="font-family: Arial, Helvetica, sans-serif;">Buisness Site</title>
+    <title style="font-family: Arial, Helvetica, sans-serif;">City Distance</title>
     <meta name="description" content="City Distance">
     <link rel="icon" href="./img/dark-logo.png" type="image/png">
     <link rel="stylesheet" href="stylesheet.css">
@@ -13,17 +13,23 @@
     <nav class="navbar"></nav>
     <script src="js/nav.js"></script>
     <div class="container">
-        <form action="">
+        <form>
             <label for="startCity">Starting City</label>
             <input type="text" class="form_input" name="startCity" id="startCity">
             <label for="startState">Starting State</label>
-            <input type="text" class="form_input" name="startState" id="startState">
+            <input type="text" class="form_input" name="startState" id="startState" maxlength="2" onchange="validateStartState()">
+            <p class="error" id="start_error"></p>
             <label for="endCity">Ending City</label>
             <input type="text" class="form_input" name="endCity" id="endCity">
             <label for="endState">Ending State</label>
-            <input type="text" class="form_input" name="endState" id="endState">
-            <button id="submit">Submit</button>
+            <input type="text" class="form_input" name="endState" id="endState" maxlength="2" onchange="validateEndState()">
+            <p class="error" id="end_error"></p>
+            <button type="button" id="submit">Calculate</button>
         </form>
+    </div>
+    <div class="container">
+        <h1>Results</h1>
+        <pre id="results"></pre>
     </div>
     <script>init()</script>
     <footer class="footer"></footer>

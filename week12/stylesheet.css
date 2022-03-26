@@ -127,8 +127,12 @@ form{
     text-transform: capitalize;
     font-family:'Courier New', Courier, monospace;
     background: none;
-    color: #a9a9a9;
+    color: #424242;
     outline: none;
+}
+
+.error{
+    color: red;
 }
 
 /*footer*/
