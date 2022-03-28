@@ -1,3 +1,16 @@
+function validateStartCity(){
+    const startCity= document.getElementById("startCity");
+    if(isNaN(startCity.value)) {
+        document.getElementById("start_city_error").innerHTML=""
+        return true;
+    }
+    else {
+        document.getElementById("start_city_error").innerHTML="Input not valid"
+        startCity.focus()
+        return false;
+    }
+}
+
 function validateStartState(){
     let startState= document.getElementById("startState").value;
     let pattern =/[a-zA-Z]{2}/;
@@ -8,6 +21,19 @@ function validateStartState(){
     else{
         document.getElementById("start_error").innerHTML = "Input not valid";
         document.getElementById('startState').focus();
+        return false;
+    }
+}
+
+function validateEndCity(){
+    let endCity= document.getElementById("endCity");
+    if(isNaN(endCity.value)) {
+        document.getElementById("end_city_error").innerHTML=""
+        return true;
+    }
+    else{
+        document.getElementById("end_city_error").innerHTML="Input not valid"
+        endCity.focus()
         return false;
     }
 }
@@ -39,11 +65,11 @@ function submitForm(){
             const resultsJSON = JSON.parse(xhttp.responseText);
             const trip = resultsJSON.trip
             var text =  "Starting City: "+trip.startcity+
-                        ", "+trip.startstate+
+                        ", "+trip.startstate.toUpperCase()+
                         "\nEnding City: "+trip.endcity+
-                        ", "+trip.endstate+
+                        ", "+trip.endstate.toUpperCase()+
                         "\nTotal Miles: "+trip.miles+
-                        "\nTransport Mode: ";
+                        "\nTransport Mode:";
             if("tmode" in trip){
                 for(let i=0; i<trip.tmode.length; i++){
                     text += " "+trip.tmode[i];
@@ -62,7 +88,7 @@ function submitForm(){
 
 function init(){
     document.getElementById("submit").addEventListener("click", function(){
-        if (validateStartState() && validateEndState()){
+        if (validateStartCity() && validateStartState() && validateEndCity() && validateEndState()){
             submitForm();
         }
     });

@@ -16,11 +16,13 @@
         <form>
             <label for="startCity">Starting City</label>
             <input type="text" class="form_input" name="startCity" id="startCity">
+            <p class="error" id="start_city_error"></p>
             <label for="startState">Starting State</label>
             <input type="text" class="form_input" name="startState" id="startState" maxlength="2" onchange="validateStartState()">
             <p class="error" id="start_error"></p>
             <label for="endCity">Ending City</label>
             <input type="text" class="form_input" name="endCity" id="endCity">
+            <p class="error" id="end_city_error"></p>
             <label for="endState">Ending State</label>
             <input type="text" class="form_input" name="endState" id="endState" maxlength="2" onchange="validateEndState()">
             <p class="error" id="end_error"></p>
