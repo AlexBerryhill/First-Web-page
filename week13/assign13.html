@@ -12,27 +12,68 @@
 <body>
     <nav class="navbar"></nav>
     <script src="js/nav.js"></script>
-    <form class="container">
+    <form class="container" action="assign13.php" method="get" target="results">
         <h1>Registration Information</h1>
         <div class="container">
             <h2>Performance Info</h2>
             <label for="performance">Type: </label>
-            <select name="performance" id="performance">
-                <option value="solo">Solo</option>
-                <option value="duet">Duet</option>
-                <option value="concerto">Concerto</option>
+            <select name="performance" id="performance" class="form_input" onchange="performanceChange()">
+                <option value="Solo">Solo</option>
+                <option value="Duet">Duet</option>
+                <option value="Concerto">Concerto</option>
             </select>
-            <label for="location">Type: </label>
-            <select name="location" id="location">
+            <label for="location">Location: </label>
+            <select name="location" id="location" class="form_input">
                 <option value="snow">Snow</option>
                 <option value="Austin">Austin</option>
                 <option value="stc">STC</option>
             </select>
+            <label for="room">Room: </label>
+            <input type="text" name="room" id="room" class="form_input">
+            <label for="time_slot">Time Slot: </label>
+            <select name="time_slot" id="time_slot" class="form_input">
+                <option value="8:00 AM">8:00 AM</option>
+                <option value="9:45 AM">9:45 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+            </select>
         </div>
         <div class="container">
             <h2>Student Info</h2>
+            <label for="first_name">First Name: </label>
+            <input type="text" name="first_name" id="first_name" class="form_input">
+            <label for="last_name">Last Name: </label>
+            <input type="text" name="last_name" id="last_name" class="form_input">
+            <label for="student_id">Student ID: </label>
+            <input type="text" name="student_id" id="student_id" class="form_input">
+            <label for="skill">Skill Level: </label>
+            <select name="skill" id="skill" class="form_input">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Pre-Advanced">Pre-Advanced</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+            <label for="instrument">Instrument: </label>
+            <select name="instrument" id="instrument" class="form_input">
+                <option value="Piano">Piano</option>
+                <option value="Voice">Intermediate</option>
+                <option value="String">Pre-Advanced</option>
+                <option value="Organ">Advanced</option>
+                <option value="Other">Advanced</option>
+            </select>
         </div>
+        <div class="container" id="student_2">
+            <h2>Student 2 Info</h2>
+            <label for="first_name_2">First Name: </label>
+            <input type="text" name="first_name_2" id="first_name_2" class="form_input">
+            <label for="last_name_2">Last Name: </label>
+            <input type="text" name="last_name_2" id="last_name_2" class="form_input">
+            <label for="student_id_2">Student ID: </label>
+            <input type="text" name="student_id_2" id="student_id_2" class="form_input">
+        </div>
+        <button type="reset" name="clear" class="form_button">Clear Form</button>
+        <button type="submit" name="register" class="form_button">Register Student</button>
     </form>
+    <iframe frameborder="0" name="results"></iframe>
     <footer class="footer"></footer>
     <script src="js/footer.js"></script>
 </body>

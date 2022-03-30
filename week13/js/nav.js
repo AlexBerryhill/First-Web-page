@@ -4,7 +4,7 @@ const createHeader = () => {
     nav.innerHTML = `
     <nav id="navbar">
         <div class="nav">
-            <a href="./assign12.html"><img src="img/dark-logo.png" class="brand-logo" alt=""></a>            <div class="nav-items">
+            <a href="./assign13.html"><img src="img/dark-logo.png" class="brand-logo" alt=""></a>            <div class="nav-items">
                 <div class="search">
                     <input type="text" class="search-box" placeholder="search brand, product">
                     <button class="search-btn">search</button>

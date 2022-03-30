@@ -32,7 +32,7 @@
 }
 
 .search{
-    width: 500px;
+    width: 65vw;
     display: flex;
 }
 
@@ -103,7 +103,7 @@
 
 /*Container*/
 .container{
-    width: 80vw;
+    width: 80%;
     margin: 20px auto;
     padding: 10px;
     text-align: center;
@@ -134,9 +134,10 @@ form{
     color: red;
 }
 
-#submit{
+.form_button{
     height: 40px;
     padding: 10px 20px;
+    margin: 5px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -145,6 +146,10 @@ form{
     text-transform: capitalize;
     font-size: 15px;
     border-radius: 10px;
+}
+
+#student_2{
+    display: none;
 }
 
 /*footer*/
