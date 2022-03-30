@@ -24,12 +24,12 @@
             </select>
             <label for="location">Location: </label>
             <select name="location" id="location" class="form_input">
-                <option value="snow">Snow</option>
+                <option value="Snow">Snow</option>
                 <option value="Austin">Austin</option>
                 <option value="stc">STC</option>
             </select>
             <label for="room">Room: </label>
-            <input type="text" name="room" id="room" class="form_input">
+            <input type="text" name="room" id="room" class="form_input" required>
             <label for="time_slot">Time Slot: </label>
             <select name="time_slot" id="time_slot" class="form_input">
                 <option value="8:00 AM">8:00 AM</option>
@@ -40,11 +40,11 @@
         <div class="container">
             <h2>Student Info</h2>
             <label for="first_name">First Name: </label>
-            <input type="text" name="first_name" id="first_name" class="form_input">
+            <input type="text" name="first_name" id="first_name" class="form_input" required>
             <label for="last_name">Last Name: </label>
-            <input type="text" name="last_name" id="last_name" class="form_input">
+            <input type="text" name="last_name" id="last_name" class="form_input" required>
             <label for="student_id">Student ID: </label>
-            <input type="text" name="student_id" id="student_id" class="form_input">
+            <input type="text" name="student_id" id="student_id" class="form_input" required>
             <label for="skill">Skill Level: </label>
             <select name="skill" id="skill" class="form_input">
                 <option value="Beginner">Beginner</option>
@@ -55,10 +55,10 @@
             <label for="instrument">Instrument: </label>
             <select name="instrument" id="instrument" class="form_input">
                 <option value="Piano">Piano</option>
-                <option value="Voice">Intermediate</option>
-                <option value="String">Pre-Advanced</option>
-                <option value="Organ">Advanced</option>
-                <option value="Other">Advanced</option>
+                <option value="Voice">Voice</option>
+                <option value="String">String</option>
+                <option value="Organ">Organ</option>
+                <option value="Other">Other</option>
             </select>
         </div>
         <div class="container" id="student_2">
@@ -69,11 +69,28 @@
             <input type="text" name="last_name_2" id="last_name_2" class="form_input">
             <label for="student_id_2">Student ID: </label>
             <input type="text" name="student_id_2" id="student_id_2" class="form_input">
+            <label for="skill_2">Skill Level: </label>
+            <select name="skill_2" id="skill_2" class="form_input">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Pre-Advanced">Pre-Advanced</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+            <label for="instrument_2">Instrument: </label>
+            <select name="instrument_2" id="instrument_2" class="form_input">
+                <option value="Piano">Piano</option>
+                <option value="Voice">Voice</option>
+                <option value="String">String</option>
+                <option value="Organ">Organ</option>
+                <option value="Other">Other</option>
+            </select>
         </div>
         <button type="reset" name="clear" class="form_button">Clear Form</button>
         <button type="submit" name="register" class="form_button">Register Student</button>
     </form>
-    <iframe frameborder="0" name="results"></iframe>
+    <div class="container" id="results_container">
+        <iframe frameborder="0" name="results" id="results"></iframe>
+    </div>
     <footer class="footer"></footer>
     <script src="js/footer.js"></script>
 </body>

@@ -150,6 +150,26 @@ form{
 
 #student_2{
     display: none;
+    overflow:visible;
+}
+
+#results_container{
+    height: 100%;
+}
+
+#results{
+    width: 100%;
+    height: 100%;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td{
+    border-top: groove;
+    padding: 5px;
 }
 
 /*footer*/
