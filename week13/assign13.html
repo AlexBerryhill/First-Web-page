@@ -22,12 +22,20 @@
                 <option value="Duet">Duet</option>
                 <option value="Concerto">Concerto</option>
             </select>
-            <label for="location">Location: </label>
-            <select name="location" id="location" class="form_input">
+            <label>Location: </label>
+            <div id="location_container">
+                <input type="radio" name="location" id="snow" value="Snow" required>
+                <label for="snow">Snow</label>
+                <input type="radio" name="location" id="austin" value="Austin" required>
+                <label for="austin">Austin</label>
+                <input type="radio" name="location" id="STC" value="STC" required>
+                <label for="STC">STC</label>
+            </div>
+            <!-- <select name="location" id="location" class="form_input">
                 <option value="Snow">Snow</option>
                 <option value="Austin">Austin</option>
                 <option value="stc">STC</option>
-            </select>
+            </select> -->
             <label for="room">Room: </label>
             <input type="text" name="room" id="room" class="form_input" required>
             <label for="time_slot">Time Slot: </label>
@@ -89,7 +97,7 @@
         <button type="submit" name="register" class="form_button">Register Student</button>
     </form>
     <div class="container" id="results_container">
-        <iframe frameborder="0" name="results" id="results"></iframe>
+        <iframe name="results" id="results"></iframe>
     </div>
     <footer class="footer"></footer>
     <script src="js/footer.js"></script>
